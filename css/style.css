@@ -79,7 +79,8 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  flex: 1; }
+  flex: 1;
+  text-align: center; }
 
 .logo {
   height: 3.25rem;
@@ -336,7 +337,8 @@ body {
   .review__text {
     margin-bottom: 2rem;
     z-index: 10;
-    position: relative; }
+    position: relative;
+    text-align: left; }
   .review__user {
     display: flex;
     align-items: center; }
