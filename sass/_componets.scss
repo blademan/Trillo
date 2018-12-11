@@ -130,15 +130,69 @@
     &__user {
         display: flex;
         align-items: center;
+        position: relative;
+       
 
     }
     &__user-photo {
+      
         height: 3.75rem;
         border-radius: 100%;
 
         margin-right: 1rem;
 
 
+    }
+
+    &__dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 18rem;
+        display: block;
+     
+        background-color: white;
+        
+        transform: scale(0);
+        transform-origin: top;
+        transition: all .3s;
+        box-shadow: var(--shadow-dark);
+        border-radius: 0 0 5px 5px;
+       
+    }
+
+    &__dropdown-item {
+        padding: 2rem;
+        color: var(--color-grey-dark-3);
+       
+
+        &:hover {
+            background-color: var(--color-grey-light-3);
+            color: var(--color-primary);
+            
+            
+        }
+        &:last-child {
+            border-top:1px solid var(--color-grey-light-3);
+            z-index: 500;
+        }
+        
+    }
+    &__dropdown-type {
+        text-transform: capitalize;
+        display: inline-block;
+        transition: all .3s;
+       
+      
+    }
+    &__user:hover &__dropdown {
+        transform: scale(1);
+        background-color: white;
+        z-index: 500;
+
+    }
+    &__dropdown-item:hover &__dropdown-type {
+        margin-left: .5rem;
     }
 
 }

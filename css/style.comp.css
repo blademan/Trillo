@@ -191,43 +191,11 @@ body {
     align-items: center; }
   .user-nav__user {
     display: flex;
-    align-items: center;
-    position: relative; }
+    align-items: center; }
   .user-nav__user-photo {
     height: 3.75rem;
     border-radius: 100%;
     margin-right: 1rem; }
-  .user-nav__dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 18rem;
-    display: block;
-    background-color: white;
-    transform: scale(0);
-    transform-origin: top;
-    transition: all .3s;
-    box-shadow: var(--shadow-dark);
-    border-radius: 0 0 5px 5px; }
-  .user-nav__dropdown-item {
-    padding: 2rem;
-    color: var(--color-grey-dark-3); }
-    .user-nav__dropdown-item:hover {
-      background-color: var(--color-grey-light-3);
-      color: var(--color-primary); }
-    .user-nav__dropdown-item:last-child {
-      border-top: 1px solid var(--color-grey-light-3);
-      z-index: 500; }
-  .user-nav__dropdown-type {
-    text-transform: capitalize;
-    display: inline-block;
-    transition: all .3s; }
-  .user-nav__user:hover .user-nav__dropdown {
-    transform: scale(1);
-    background-color: white;
-    z-index: 500; }
-  .user-nav__dropdown-item:hover .user-nav__dropdown-type {
-    margin-left: .5rem; }
 
 .side-nav {
   font-size: 1.5rem;
