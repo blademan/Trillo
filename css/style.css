@@ -205,8 +205,9 @@ body {
     display: block;
     background-color: white;
     transform: scale(0);
+    opacity: 0;
     transform-origin: top;
-    transition: all .3s;
+    transition: all .8s;
     box-shadow: var(--shadow-dark);
     border-radius: 0 0 5px 5px; }
   .user-nav__dropdown-item {
@@ -224,10 +225,82 @@ body {
     transition: all .3s; }
   .user-nav__user:hover .user-nav__dropdown {
     transform: scale(1);
+    opacity: 1;
     background-color: white;
     z-index: 500; }
   .user-nav__dropdown-item:hover .user-nav__dropdown-type {
     margin-left: .5rem; }
+
+.message {
+  position: absolute;
+  top: 100%;
+  right: -9rem;
+  width: 40rem;
+  min-height: 20rem;
+  color: var(--color-grey-dark-3);
+  background-color: white;
+  box-shadow: var(--shadow-light);
+  border-radius: 0 0 5px 5px;
+  z-index: 200;
+  transform: scale(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: all .8s; }
+  .message__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: var(--line);
+    border-bottom: var(--line); }
+  .message__heading-recent {
+    font-weight: 700;
+    color: var(--color-grey-dark-2); }
+  .message__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: relative; }
+  .message__user::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-grey-light-2);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .message__user:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+    z-index: -1; }
+  .message__user:not(:last-child) {
+    border-bottom: var(--line); }
+  .message__user-photo {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-right: 2rem; }
+  .message__box {
+    margin-right: auto; }
+    .message__box-name {
+      font-weight: 700;
+      color: var(--color-grey-dark-2);
+      margin-bottom: 1rem; }
+    .message__box-day {
+      font-weight: 400;
+      color: var(--color-grey-light-4); }
+  .message__heading-recent, .message__heading-requests, .message__heading-new {
+    padding: 1.5rem 2rem; }
+  .message__heading-recent:hover, .message__heading-requests:hover, .message__heading-new:hover {
+    color: var(--color-primary); }
+
+.user-nav__icon-box:hover .message {
+  transform: scale(1);
+  opacity: 1;
+  background-color: white;
+  z-index: 500; }
 
 .side-nav {
   font-size: 1.5rem;
